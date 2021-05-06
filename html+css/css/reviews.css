@@ -1,0 +1,94 @@
+#review-form {
+	border: 2px solid var(--border-color);
+    border-radius: 8px;
+}
+#review-form:focus-within {
+	box-shadow: 0px 0.2em 2.5em var(--shadow-color);
+  	transform: scale(1.025); 
+}
+.review-label:focus-within .label-title {
+	color: #D96F36;
+}
+.review-label {
+	font-size: 21px;
+    margin: 10px 21px 30px;
+}
+.review-title {
+	font-size: 1.4em;
+	font-family: 'Kavivanar', cursive;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+}
+.review-title:focus {
+	background: #FFE;
+	transition: box-shadow .3s cubic-bezier(0, -0, .50, .50) 1ms;	
+	box-shadow: 0px 0px 0px 2px #D96F36;
+}
+.review-input {
+	display: block;
+	width: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+	font-family: 'Kavivanar', cursive;
+	border-radius: 8px;
+}
+.review-input:focus {
+	background: #FFE;	
+	transition: box-shadow .3s cubic-bezier(0, -0, .50, .50) 1ms;
+	box-shadow: 0px 0px 0px 2px #D96F36;
+}
+
+/**** Stars ****/
+.rating-area {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 210px;
+}
+.rating-area > label:last-child {
+	padding-right: 10px;
+}
+.rating-area:not(:checked) > input {
+	opacity: 0;
+    width: 0;
+    height: 0;
+}
+.rating-area:not(:checked) .star-icon {
+	cursor: pointer;
+	font-size: 24px;
+	color: lightgray;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) .star-icon:before {
+	content: '★';
+}
+.rating-area > input:checked ~ .star-icon {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > .star-icon:hover,
+.rating-area:not(:checked) > .star-icon:hover ~ .star-icon {
+	color: gold;
+}
+.rating-area > input:checked + .star-icon:hover,
+.rating-area > input:checked + .star-icon:hover ~ .star-icon,
+.rating-area > input:checked ~ .star-icon:hover,
+.rating-area > input:checked ~ .star-icon:hover ~ .star-icon,
+.rating-area > .star-icon:hover ~ input:checked ~ .star-icon {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+/**** ****/
+
+.single-review {
+	background-color: var(--secondary-color);
+	margin-top: 35px;
+    border-radius: 8px;
+    padding: 10px;
+}
+.review-name {
+	display: block;
+    margin: 3px 0 15px;
+}
+

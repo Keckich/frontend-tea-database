@@ -1,0 +1,33 @@
+<section class="data-section col-6 col-xs-12 text-center single-unit img-section">
+    <img src="{{img_url}}" class="img-responsive">     
+</section>	
+<section class="data-section col-6 col-xs-12 text-left single-unit">			
+    <div class="flex-wrap-space">
+        <b class="title-row">{{tea_name}}</b>
+        <div class="rating-result item-rate">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="review-count">{{count}} review(s)</span>
+        </div>
+    </div>        
+    <p class="price">
+        <strong>Cost:&nbsp;</strong>
+        {{cost}}
+    </p>	  
+    <button id="delete-btn" class="submit-btn" style="display: none; margin: 0;" onclick="removeTea('{{name}}', '{{tea_name}}');">Delete</button>
+    <button id="edit-btn" class="submit-btn" style="display: none; margin: 0;" onclick="onNavigate('#/edit/{{name}}/{{tea_name}}');">Edit</button>        	
+    <hr>
+    <div id="description">
+        <p>
+            <strong>Description:&nbsp;</strong>
+            {{description}}
+        </p>
+        <p>
+            <strong>Place:&nbsp;</strong>
+            {{place}}
+        </p>
+    </div>
+</section>
